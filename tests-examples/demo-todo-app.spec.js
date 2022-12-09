@@ -203,7 +203,7 @@ test.describe("Editing", () => {
       })
     ).not.toBeVisible();
     await checkNumberOfTodosInLocalStorage(page, 3);
-    //
+    expect(await page.screenshot()).toMatchSnapshot();
   });
 
   test("should save edits on blur", async ({ page }) => {
